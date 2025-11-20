@@ -1,0 +1,5 @@
+{
+  "name": "NeuroNote",
+  "description": "A cognitive note-taking application featuring WYSIWYG editing, bi-directional linking, and AI-powered connection discovery.",
+  "requestFramePermissions": []
+}

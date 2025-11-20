@@ -1,0 +1,610 @@
+[
+  {
+    "id": "2",
+    "title": "Big Bang",
+    "content": "The rapid expansion of matter from a state of extremely high density and temperature. It marks the origin of the [[The Cosmos]]. It created the fundamental elements, eventually leading to the formation of every [[Star]] and [[Galaxy]].",
+    "tags": [
+      "origin",
+      "physics"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "18",
+    "title": "Black Hole",
+    "content": "A region of spacetime where gravity is so strong that nothing, including light, can escape. The boundary is called the [[Event Horizon]]. Most galaxies, like the [[Milky Way]], have a supermassive one at the center.",
+    "tags": [
+      "phenomenon",
+      "physics"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "22",
+    "title": "Dark Energy",
+    "content": "An unknown form of energy that affects the universe on the largest scales, driving the accelerating expansion of the [[The Cosmos]] initiated by the [[Big Bang]].",
+    "tags": [
+      "physics",
+      "mystery"
+    ],
+    "updatedAt": 1763666879704,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "21",
+    "title": "Dark Matter",
+    "content": "A hypothetical form of matter that is thought to account for approximately 85% of the matter in the [[The Cosmos]]. It does not interact with light but exerts [[Gravity]].",
+    "tags": [
+      "physics",
+      "mystery"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "34",
+    "title": "Deimos",
+    "content": "The smaller and outer of the two natural satellites of [[Mars]].",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "60",
+    "title": "Eagle Nebula",
+    "content": "A young open cluster of stars in the constellation Serpens. It contains the [[Pillars of Creation]].",
+    "tags": [
+      "nebula"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "9",
+    "title": "Earth",
+    "content": "The third planet from the [[Sun]] and the only astronomical object known to harbor life. It has one natural satellite, the [[Moon]]. It exists within the [[Goldilocks Zone]].",
+    "tags": [
+      "planet",
+      "terrestrial",
+      "life"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "27",
+    "title": "Elliptical Galaxy",
+    "content": "A type of [[Galaxy]] having an approximately ellipsoidal shape and a smooth, nearly featureless brightness profile. Unlike a [[Spiral Galaxy]], they have little structure.",
+    "tags": [
+      "structure"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "32",
+    "title": "Enceladus",
+    "content": "A moon of [[Saturn]]. It ejects plumes of salt water and ice grains from its south polar region, suggesting a subsurface ocean.",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "29",
+    "title": "Europa",
+    "content": "A moon of [[Jupiter]]. It has the smoothest surface of any known solid object in the [[Solar System]]. It likely has a subsurface ocean of water, making it a candidate for extraterrestrial life.",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "19",
+    "title": "Event Horizon",
+    "content": "The point of no return around a [[Black Hole]]. Any object crossing this boundary is pulled into the singularity.",
+    "tags": [
+      "physics",
+      "boundary"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "48",
+    "title": "Exoplanet",
+    "content": "A planet outside the [[Solar System]]. Thousands have been discovered by telescopes like [[Kepler Space Telescope]] and [[James Webb Space Telescope]].",
+    "tags": [
+      "planet"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "3",
+    "title": "Galaxy",
+    "content": "A massive gravitationally bound system that consists of [[Star]] systems, stellar remnants, interstellar gas, dust, and [[Dark Matter]]. Types include [[Spiral Galaxy]], [[Elliptical Galaxy]], and [[Irregular Galaxy]].",
+    "tags": [
+      "structure"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "30",
+    "title": "Ganymede",
+    "content": "A moon of [[Jupiter]] and the largest and most massive moon in the [[Solar System]]. It is even larger than the planet [[Mercury]].",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "47",
+    "title": "Goldilocks Zone",
+    "content": "The habitable zone around a star where the temperature is just right - not too hot and not too cold - for liquid water to exist on a planet like [[Earth]].",
+    "tags": [
+      "concept"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "23",
+    "title": "Gravity",
+    "content": "A fundamental interaction which causes mutual attraction between all things with mass or energy. It governs the orbits of planets in the [[Solar System]] and the structure of every [[Galaxy]].",
+    "tags": [
+      "physics",
+      "force"
+    ],
+    "updatedAt": 1763666977726,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "5528a791-3771-4a8a-9bd9-5403e4eefce8",
+    "title": "Hello World",
+    "content": "Hello everyone, it's Akif here! \n\nHere are some planets in the: [[Apollo 11]] [[Apollo 11]]",
+    "tags": [],
+    "updatedAt": 1763666636724,
+    "createdAt": 1763666524660
+  },
+  {
+    "id": "50",
+    "title": "Hubble Space Telescope",
+    "content": "A space telescope that was launched into low Earth orbit in 1990. It has provided some of the most detailed images of the [[The Cosmos]].",
+    "tags": [
+      "tech"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "31",
+    "title": "Io",
+    "content": "A moon of [[Jupiter]]. It is the most geologically active object in the [[Solar System]], with over 400 active volcanoes.",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "57",
+    "title": "Irregular Galaxy",
+    "content": "A [[Galaxy]] that does not have a distinct regular shape, unlike a [[Spiral Galaxy]] or an [[Elliptical Galaxy]].",
+    "tags": [
+      "structure"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "49",
+    "title": "James Webb Space Telescope",
+    "content": "A space telescope conducted by NASA, ESA, and CSA. It views the [[The Cosmos]] in infrared, allowing it to see through dust clouds in a [[Nebula]] and observe the early universe after the [[Big Bang]].",
+    "tags": [
+      "tech"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "12",
+    "title": "Jupiter",
+    "content": "The fifth planet from the [[Sun]] and the largest in the [[Solar System]]. It is a gas giant with a Great Red Spot, a giant storm. It has many moons, including [[Ganymede]], [[Callisto]], [[Io]], and [[Europa]].",
+    "tags": [
+      "planet",
+      "gas giant"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "53",
+    "title": "Kepler Space Telescope",
+    "content": "A retired space telescope launched by NASA to discover Earth-size planets orbiting other stars, hunting for [[Exoplanet]]s.",
+    "tags": [
+      "tech"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "35",
+    "title": "Kuiper Belt",
+    "content": "A circumstellar disc in the outer [[Solar System]], extending beyond the orbit of [[Neptune]]. It is similar to the [[Asteroid Belt]] but far larger. [[Pluto]] resides here.",
+    "tags": [
+      "region"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "24",
+    "title": "Light Year",
+    "content": "A unit of length used to express astronomical distances. It is the distance that light travels in vacuum in one Julian year (approx. 9.46 trillion km). Used to measure distance to [[Proxima Centauri]] and [[Andromeda Galaxy]].",
+    "tags": [
+      "measurement"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "11",
+    "title": "Mars",
+    "content": "The fourth planet from the [[Sun]], often called the \"Red Planet\" due to iron oxide on its surface. It has two moons, [[Phobos]] and [[Deimos]]. It is a prime target for the search for past life and future colonization.",
+    "tags": [
+      "planet",
+      "terrestrial"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "7",
+    "title": "Mercury",
+    "content": "The smallest planet in the [[Solar System]] and the closest to the [[Sun]]. It has no atmosphere to retain heat, leading to extreme temperature fluctuations.",
+    "tags": [
+      "planet",
+      "terrestrial"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "11f2c1c1-3849-4c5a-bb0f-b23d8893bc9d",
+    "title": "Merhaba Dunya",
+    "content": "## Selam Herkese\nBen Akif umarim iyisinizdir. \n[[Dark Energy]] guzel bir planettir. Bunun yaninda [[The Cosmos]] da iyidir.",
+    "tags": [],
+    "updatedAt": 1763668017309,
+    "createdAt": 1763667881001
+  },
+  {
+    "id": "4",
+    "title": "Milky Way",
+    "content": "The [[Galaxy]] that contains our [[Solar System]]. It is a barred [[Spiral Galaxy]] with a diameter between 100,000 and 200,000 [[Light Year]]s. At its center lies a supermassive [[Black Hole]] known as [[Sagittarius A*]]. It is on a collision course with the [[Andromeda Galaxy]].",
+    "tags": [
+      "galaxy",
+      "home"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "10",
+    "title": "Moon",
+    "content": "[[Earth]]'s only natural satellite. It influences tides and stabilizes the planet's axial tilt. Humans first landed here during the [[Apollo 11]] mission.",
+    "tags": [
+      "moon",
+      "satellite"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "38",
+    "title": "Nebula",
+    "content": "A distinct body of interstellar clouds (which can consist of cosmic dust, hydrogen, helium, molecular clouds). Stars are often born in them, like in the [[Orion Nebula]].",
+    "tags": [
+      "structure"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "15",
+    "title": "Neptune",
+    "content": "The eighth and farthest-known planet from the [[Sun]]. It is an ice giant known for its supersonic winds and deep blue color.",
+    "tags": [
+      "planet",
+      "ice giant"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "41",
+    "title": "Neutron Star",
+    "content": "The collapsed core of a massive supergiant [[Star]]. They are the smallest and densest stars known to exist.",
+    "tags": [
+      "star",
+      "remnant"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "37",
+    "title": "Oort Cloud",
+    "content": "A theoretical cloud of predominantly icy planetesimals proposed to surround the [[Sun]] at distances ranging up to 100,000 AU.",
+    "tags": [
+      "region"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "39",
+    "title": "Orion Nebula",
+    "content": "A diffuse [[Nebula]] situated in the Milky Way, being south of Orion's Belt in the constellation of Orion. It is one of the brightest nebulae.",
+    "tags": [
+      "nebula"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "33",
+    "title": "Phobos",
+    "content": "The larger and closer of the two natural satellites of [[Mars]].",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "59",
+    "title": "Pillars of Creation",
+    "content": "A photograph taken by the [[Hubble Space Telescope]] of elephant trunks of interstellar gas and dust in the Eagle [[Nebula]].",
+    "tags": [
+      "phenomenon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "16",
+    "title": "Pluto",
+    "content": "A dwarf planet in the [[Kuiper Belt]], a ring of bodies beyond [[Neptune]]. It was considered the ninth planet until 2006.",
+    "tags": [
+      "dwarf planet"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "45",
+    "title": "Proxima Centauri",
+    "content": "A small, low-mass star located 4.244 [[Light Year]]s from the [[Sun]]. It is the closest known star to the [[Solar System]]. It has an exoplanet, [[Proxima Centauri b]].",
+    "tags": [
+      "star"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "46",
+    "title": "Proxima Centauri b",
+    "content": "An exoplanet orbiting within the [[Goldilocks Zone]] of the red dwarf star [[Proxima Centauri]], the closest star to the [[Sun]].",
+    "tags": [
+      "exoplanet"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "42",
+    "title": "Pulsar",
+    "content": "A highly magnetized rotating [[Neutron Star]] that emits beams of electromagnetic radiation out of its magnetic poles.",
+    "tags": [
+      "star"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "44",
+    "title": "Red Giant",
+    "content": "A luminous giant [[Star]] of low or intermediate mass in a late phase of stellar evolution.",
+    "tags": [
+      "star"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "20",
+    "title": "Sagittarius A*",
+    "content": "The supermassive [[Black Hole]] at the Galactic Center of the [[Milky Way]].",
+    "tags": [
+      "black hole",
+      "center"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "13",
+    "title": "Saturn",
+    "content": "The sixth planet from the [[Sun]], famous for its prominent ring system. It is a gas giant with numerous moons, including [[Titan]] and [[Enceladus]].",
+    "tags": [
+      "planet",
+      "gas giant"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "5",
+    "title": "Solar System",
+    "content": "The gravitationally bound system of the [[Sun]] and the objects that orbit it, including eight planets: [[Mercury]], [[Venus]], [[Earth]], [[Mars]], [[Jupiter]], [[Saturn]], [[Uranus]], and [[Neptune]]. It resides in the Orion Arm of the [[Milky Way]].",
+    "tags": [
+      "system",
+      "home"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "55",
+    "title": "Sombrero Galaxy",
+    "content": "A peculiar [[Galaxy]] of unclear classification in the constellation Virgo. It has a bright nucleus and an unusually large central bulge.",
+    "tags": [
+      "galaxy"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "26",
+    "title": "Spiral Galaxy",
+    "content": "A type of [[Galaxy]] characterized by a flat, rotating disk containing stars, gas, and dust, and a central concentration of stars known as the bulge. The [[Milky Way]] and [[Andromeda Galaxy]] are examples.",
+    "tags": [
+      "structure"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "25",
+    "title": "Star",
+    "content": "An astronomical object consisting of a luminous spheroid of plasma held together by its own [[Gravity]]. The nearest star to [[Earth]] is the [[Sun]].",
+    "tags": [
+      "celestial body"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "6",
+    "title": "Sun",
+    "content": "The [[Star]] at the center of the [[Solar System]]. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core. It provides the energy for life on [[Earth]].",
+    "tags": [
+      "star"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "40",
+    "title": "Supernova",
+    "content": "A powerful and luminous stellar explosion. This transient astronomical event occurs during the last evolutionary stages of a massive [[Star]] or when a [[White Dwarf]] is triggered into runaway nuclear fusion.",
+    "tags": [
+      "event"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "1",
+    "title": "The Cosmos",
+    "content": "",
+    "tags": [
+      "root",
+      "concept"
+    ],
+    "updatedAt": 1763667828199,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "28",
+    "title": "Titan",
+    "content": "The largest moon of [[Saturn]]. It is the only moon known to have a dense atmosphere and the only object other than [[Earth]] where stable bodies of surface liquid have been found.",
+    "tags": [
+      "moon"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "58",
+    "title": "TRAPPIST-1 System",
+    "content": "A system of seven temperate terrestrial planets orbiting an ultra-cool dwarf star. Several are in the [[Goldilocks Zone]].",
+    "tags": [
+      "system"
+    ],
+    "updatedAt": 1763666352407,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "54",
+    "title": "Triangulum Galaxy",
+    "content": "A [[Spiral Galaxy]] approximately 3 million [[Light Year]]s from Earth. It is the third-largest member of the Local Group, behind the [[Andromeda Galaxy]] and the [[Milky Way]].",
+    "tags": [
+      "galaxy"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "14",
+    "title": "Uranus",
+    "content": "The seventh planet from the [[Sun]]. It is an ice giant with a unique tilt, rotating on its side. It has a faint ring system.",
+    "tags": [
+      "planet",
+      "ice giant"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "8",
+    "title": "Venus",
+    "content": "The second planet from the [[Sun]]. It has a dense atmosphere of carbon dioxide, creating a runaway greenhouse effect that makes it the hottest planet in the [[Solar System]]. It is often called [[Earth]]'s twin due to similar size.",
+    "tags": [
+      "planet",
+      "terrestrial"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "51",
+    "title": "Voyager 1",
+    "content": "A space probe launched by NASA in 1977. It is the most distant human-made object from [[Earth]], having entered interstellar space beyond the [[Kuiper Belt]].",
+    "tags": [
+      "tech"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "56",
+    "title": "Whirlpool Galaxy",
+    "content": "A distinct interacting grand-design [[Spiral Galaxy]]. It was the first galaxy to be classified as a spiral galaxy.",
+    "tags": [
+      "galaxy"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  },
+  {
+    "id": "43",
+    "title": "White Dwarf",
+    "content": "A stellar core remnant composed mostly of electron-degenerate matter. Our [[Sun]] will eventually become one.",
+    "tags": [
+      "star",
+      "remnant"
+    ],
+    "updatedAt": 1763666299243,
+    "createdAt": 1763666299243
+  }
+]

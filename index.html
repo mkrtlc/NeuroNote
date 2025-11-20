@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroNote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                900: '#0c4a6e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Editor Styles */
+      .editor-content:empty:before {
+        content: attr(placeholder);
+        color: #9ca3af;
+        pointer-events: none;
+      }
+
+      /* Link Chips */
+      .link-chip {
+        display: inline-flex;
+        align-items: center;
+        background-color: #e0f2fe;
+        color: #0284c7;
+        padding: 0 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        user-select: none;
+        margin: 0 2px;
+        text-decoration: none;
+        border: 1px solid transparent;
+      }
+      .link-chip:hover {
+        border-color: #0ea5e9;
+        background-color: #bae6fd;
+      }
+
+      /* Headings */
+      .editor-content h1 {
+        font-size: 2em;
+        font-weight: 700;
+        margin: 0.67em 0;
+        line-height: 1.2;
+        color: #0f172a;
+      }
+      .editor-content h2 {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin: 0.83em 0;
+        line-height: 1.3;
+        color: #1e293b;
+      }
+      .editor-content h3 {
+        font-size: 1.17em;
+        font-weight: 600;
+        margin: 1em 0;
+        line-height: 1.4;
+        color: #334155;
+      }
+
+      /* Lists */
+      .editor-content .bullet-item {
+        display: list-item;
+        list-style-type: disc;
+        margin-left: 1.5em;
+        padding: 0.25em 0;
+      }
+      .editor-content .numbered-item {
+        display: list-item;
+        list-style-type: decimal;
+        margin-left: 1.5em;
+        padding: 0.25em 0;
+      }
+
+      /* Block Quote */
+      .editor-content blockquote {
+        border-left: 4px solid #0ea5e9;
+        background-color: #f8fafc;
+        padding: 0.75em 1em;
+        margin: 1em 0;
+        color: #475569;
+        font-style: italic;
+      }
+
+      /* Code */
+      .editor-content code {
+        background-color: #f1f5f9;
+        color: #0f172a;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 0.9em;
+      }
+      .editor-content code.code-block {
+        display: block;
+        padding: 1em;
+        margin: 1em 0;
+        background-color: #1e293b;
+        color: #e2e8f0;
+        border-radius: 6px;
+        overflow-x: auto;
+        white-space: pre;
+      }
+
+      /* Horizontal Rule */
+      .editor-content hr {
+        border: none;
+        border-top: 2px solid #e2e8f0;
+        margin: 2em 0;
+      }
+
+      /* Bold and Italic */
+      .editor-content b {
+        font-weight: 600;
+      }
+      .editor-content i {
+        font-style: italic;
+      }
+
+      /* Hide scrollbars for cleaner UI but keep functionality */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "d3": "https://aistudiocdn.com/d3@^7.9.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900 overflow-hidden h-screen w-screen">
+    <div id="root" class="h-full w-full"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

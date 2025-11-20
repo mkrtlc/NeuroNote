@@ -1,0 +1,17 @@
+# Data Folder
+
+This folder stores your notes as a JSON file.
+
+## notes.json
+
+Your notes are automatically saved to `notes.json` in this folder.
+
+- **Format:** JSON array of note objects
+- **Backup:** Simply copy this file to backup your data
+- **Version control:** Add to git to track note history
+- **Share:** Send this file to share your notes with others
+
+## Starting Fresh
+
+To start with a blank slate, delete `notes.json` and restart the app.
+The app will recreate it with sample cosmos notes.

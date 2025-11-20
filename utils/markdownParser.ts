@@ -1,0 +1,156 @@
+/**
+ * A lightweight parser to convert stored Markdown to editor HTML and vice versa.
+ * Supports Links, Bold, Italic, Headings, Lists, Code, Quotes, and more.
+ */
+
+// Convert Markdown string to HTML string for contentEditable
+export const markdownToHtml = (markdown: string): string => {
+  if (!markdown) return '';
+
+  // Process line by line for block-level elements
+  const lines = markdown.split('\n');
+  const processedLines = lines.map(line => {
+    let processedLine = line
+      // Escape HTML
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+    // Block-level elements (must be at start of line)
+    // Headings
+    if (/^### (.+)/.test(processedLine)) {
+      processedLine = processedLine.replace(/^### (.+)/, '<h3>$1</h3>');
+    } else if (/^## (.+)/.test(processedLine)) {
+      processedLine = processedLine.replace(/^## (.+)/, '<h2>$1</h2>');
+    } else if (/^# (.+)/.test(processedLine)) {
+      processedLine = processedLine.replace(/^# (.+)/, '<h1>$1</h1>');
+    }
+    // Horizontal rule
+    else if (/^---+$/.test(processedLine)) {
+      processedLine = '<hr>';
+    }
+    // Block quote
+    else if (/^&gt; (.+)/.test(processedLine)) {
+      processedLine = processedLine.replace(/^&gt; (.+)/, '<blockquote>$1</blockquote>');
+    }
+    // Bullet list
+    else if (/^[\-\*] (.+)/.test(processedLine)) {
+      processedLine = processedLine.replace(/^[\-\*] (.+)/, '<li class="bullet-item">$1</li>');
+    }
+    // Numbered list
+    else if (/^\d+\. (.+)/.test(processedLine)) {
+      processedLine = processedLine.replace(/^\d+\. (.+)/, '<li class="numbered-item">$1</li>');
+    }
+
+    // Inline elements
+    // Links [[Title]]
+    processedLine = processedLine.replace(/\[\[(.*?)\]\]/g, (match, content) => {
+      const [target, label] = content.split('|');
+      const display = label || target;
+      return `<span class="link-chip" contenteditable="false" data-link="${target}">${display}</span>`;
+    });
+
+    // Code blocks ```code```
+    processedLine = processedLine.replace(/```(.*?)```/g, '<code class="code-block">$1</code>');
+
+    // Inline code `code`
+    processedLine = processedLine.replace(/`(.*?)`/g, '<code>$1</code>');
+
+    // Bold **text**
+    processedLine = processedLine.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+
+    // Italic *text* (but not in list markers)
+    processedLine = processedLine.replace(/(?<!\*)\*([^\*]+?)\*(?!\*)/g, '<i>$1</i>');
+
+    return processedLine;
+  });
+
+  const html = processedLines.join('<br>');
+  return html;
+};
+
+// Convert HTML contentEditable content back to Markdown for storage
+export const htmlToMarkdown = (html: string): string => {
+  if (!html) return '';
+
+  // Create a temporary DOM element to traverse logic
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+
+  const walk = (node: Node): string => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      return node.textContent || '';
+    }
+
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      const el = node as HTMLElement;
+
+      // Block elements
+      if (el.tagName === 'BR') return '\n';
+      if (el.tagName === 'DIV') return '\n' + Array.from(el.childNodes).map(walk).join('');
+      if (el.tagName === 'HR') return '\n---\n';
+
+      // Headings
+      if (el.tagName === 'H1') return `# ${Array.from(el.childNodes).map(walk).join('')}`;
+      if (el.tagName === 'H2') return `## ${Array.from(el.childNodes).map(walk).join('')}`;
+      if (el.tagName === 'H3') return `### ${Array.from(el.childNodes).map(walk).join('')}`;
+
+      // Block quote
+      if (el.tagName === 'BLOCKQUOTE') return `> ${Array.from(el.childNodes).map(walk).join('')}`;
+
+      // Lists
+      if (el.classList.contains('bullet-item')) {
+        return `- ${Array.from(el.childNodes).map(walk).join('')}`;
+      }
+      if (el.classList.contains('numbered-item')) {
+        return `1. ${Array.from(el.childNodes).map(walk).join('')}`;
+      }
+
+      // Code
+      if (el.tagName === 'CODE') {
+        const content = Array.from(el.childNodes).map(walk).join('');
+        if (el.classList.contains('code-block')) {
+          return '```' + content + '```';
+        }
+        return '`' + content + '`';
+      }
+
+      // Inline styles
+      if (el.tagName === 'B' || el.style.fontWeight === 'bold') {
+        return `**${Array.from(el.childNodes).map(walk).join('')}**`;
+      }
+      if (el.tagName === 'I' || el.style.fontStyle === 'italic') {
+        return `*${Array.from(el.childNodes).map(walk).join('')}*`;
+      }
+
+      // Links
+      if (el.classList.contains('link-chip')) {
+         const target = el.getAttribute('data-link');
+         const text = el.textContent;
+         if (target === text) return `[[${target}]]`;
+         return `[[${target}|${text}]]`;
+      }
+
+      return Array.from(el.childNodes).map(walk).join('');
+    }
+    return '';
+  };
+
+  let markdown = Array.from(tempDiv.childNodes).map(walk).join('');
+
+  // Cleanup excess newlines often generated by contenteditable divs
+  markdown = markdown.replace(/\n\n\n+/g, '\n\n').trim();
+
+  return markdown;
+};
+
+export const extractLinks = (markdown: string): string[] => {
+  const regex = /\[\[(.*?)\]\]/g;
+  const links: string[] = [];
+  let match;
+  while ((match = regex.exec(markdown)) !== null) {
+    const [target] = match[1].split('|');
+    links.push(target);
+  }
+  return links;
+};

@@ -1,0 +1,53 @@
+{
+  "name": "neuronote",
+  "version": "1.0.0",
+  "description": "A beautiful, local-first note-taking app with graph visualization and Notion-style markdown editing",
+  "type": "module",
+  "author": "NeuroNote Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkrtlc/NeuroNote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkrtlc/NeuroNote/issues"
+  },
+  "homepage": "https://github.com/mkrtlc/NeuroNote#readme",
+  "keywords": [
+    "note-taking",
+    "markdown",
+    "knowledge-graph",
+    "obsidian",
+    "notion",
+    "local-first",
+    "graph-visualization",
+    "bidirectional-links",
+    "zettelkasten",
+    "pkm"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "server": "node server.js",
+    "start": "npm run server & npm run dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "d3": "^7.9.0",
+    "lucide-react": "^0.554.0",
+    "uuid": "^13.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
