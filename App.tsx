@@ -22,76 +22,6 @@ import {
   Trash2
 } from 'lucide-react';
 
-// --- Cosmos Dataset Generation ---
-const generateCosmosData = (): Note[] => {
-  const now = Date.now();
-  const create = (id: string, title: string, content: string, tags: string[]): Note => ({
-    id, title, content, tags, updatedAt: now, createdAt: now
-  });
-
-  return [
-    create('1', 'The Cosmos', 'The **Cosmos** is the universe considered as a complex and orderly system. It contains billions of [[Galaxy]] structures, including our own [[Milky Way]]. It began with the [[Big Bang]] and is governed by forces like [[Gravity]] and mysterious components like [[Dark Matter]].', ['root', 'concept']),
-    create('2', 'Big Bang', 'The rapid expansion of matter from a state of extremely high density and temperature. It marks the origin of the [[The Cosmos]]. It created the fundamental elements, eventually leading to the formation of every [[Star]] and [[Galaxy]].', ['origin', 'physics']),
-    create('3', 'Galaxy', 'A massive gravitationally bound system that consists of [[Star]] systems, stellar remnants, interstellar gas, dust, and [[Dark Matter]]. Types include [[Spiral Galaxy]], [[Elliptical Galaxy]], and [[Irregular Galaxy]].', ['structure']),
-    create('4', 'Milky Way', 'The [[Galaxy]] that contains our [[Solar System]]. It is a barred [[Spiral Galaxy]] with a diameter between 100,000 and 200,000 [[Light Year]]s. At its center lies a supermassive [[Black Hole]] known as [[Sagittarius A*]]. It is on a collision course with the [[Andromeda Galaxy]].', ['galaxy', 'home']),
-    create('5', 'Solar System', 'The gravitationally bound system of the [[Sun]] and the objects that orbit it, including eight planets: [[Mercury]], [[Venus]], [[Earth]], [[Mars]], [[Jupiter]], [[Saturn]], [[Uranus]], and [[Neptune]]. It resides in the Orion Arm of the [[Milky Way]].', ['system', 'home']),
-    create('6', 'Sun', 'The [[Star]] at the center of the [[Solar System]]. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core. It provides the energy for life on [[Earth]].', ['star']),
-    create('7', 'Mercury', 'The smallest planet in the [[Solar System]] and the closest to the [[Sun]]. It has no atmosphere to retain heat, leading to extreme temperature fluctuations.', ['planet', 'terrestrial']),
-    create('8', 'Venus', 'The second planet from the [[Sun]]. It has a dense atmosphere of carbon dioxide, creating a runaway greenhouse effect that makes it the hottest planet in the [[Solar System]]. It is often called [[Earth]]\'s twin due to similar size.', ['planet', 'terrestrial']),
-    create('9', 'Earth', 'The third planet from the [[Sun]] and the only astronomical object known to harbor life. It has one natural satellite, the [[Moon]]. It exists within the [[Goldilocks Zone]].', ['planet', 'terrestrial', 'life']),
-    create('10', 'Moon', '[[Earth]]\'s only natural satellite. It influences tides and stabilizes the planet\'s axial tilt. Humans first landed here during the [[Apollo 11]] mission.', ['moon', 'satellite']),
-    create('11', 'Mars', 'The fourth planet from the [[Sun]], often called the "Red Planet" due to iron oxide on its surface. It has two moons, [[Phobos]] and [[Deimos]]. It is a prime target for the search for past life and future colonization.', ['planet', 'terrestrial']),
-    create('12', 'Jupiter', 'The fifth planet from the [[Sun]] and the largest in the [[Solar System]]. It is a gas giant with a Great Red Spot, a giant storm. It has many moons, including [[Ganymede]], [[Callisto]], [[Io]], and [[Europa]].', ['planet', 'gas giant']),
-    create('13', 'Saturn', 'The sixth planet from the [[Sun]], famous for its prominent ring system. It is a gas giant with numerous moons, including [[Titan]] and [[Enceladus]].', ['planet', 'gas giant']),
-    create('14', 'Uranus', 'The seventh planet from the [[Sun]]. It is an ice giant with a unique tilt, rotating on its side. It has a faint ring system.', ['planet', 'ice giant']),
-    create('15', 'Neptune', 'The eighth and farthest-known planet from the [[Sun]]. It is an ice giant known for its supersonic winds and deep blue color.', ['planet', 'ice giant']),
-    create('16', 'Pluto', 'A dwarf planet in the [[Kuiper Belt]], a ring of bodies beyond [[Neptune]]. It was considered the ninth planet until 2006.', ['dwarf planet']),
-    create('17', 'Andromeda Galaxy', 'The nearest major [[Galaxy]] to the [[Milky Way]]. It is a [[Spiral Galaxy]] and contains approximately one trillion stars. It is expected to merge with the Milky Way in about 4.5 billion years.', ['galaxy']),
-    create('18', 'Black Hole', 'A region of spacetime where gravity is so strong that nothing, including light, can escape. The boundary is called the [[Event Horizon]]. Most galaxies, like the [[Milky Way]], have a supermassive one at the center.', ['phenomenon', 'physics']),
-    create('19', 'Event Horizon', 'The point of no return around a [[Black Hole]]. Any object crossing this boundary is pulled into the singularity.', ['physics', 'boundary']),
-    create('20', 'Sagittarius A*', 'The supermassive [[Black Hole]] at the Galactic Center of the [[Milky Way]].', ['black hole', 'center']),
-    create('21', 'Dark Matter', 'A hypothetical form of matter that is thought to account for approximately 85% of the matter in the [[The Cosmos]]. It does not interact with light but exerts [[Gravity]].', ['physics', 'mystery']),
-    create('22', 'Dark Energy', 'An unknown form of energy that affects the universe on the largest scales, driving the accelerating expansion of the [[The Cosmos]] initiated by the [[Big Bang]].', ['physics', 'mystery']),
-    create('23', 'Gravity', 'A fundamental interaction which causes mutual attraction between all things with mass or energy. It governs the orbits of planets in the [[Solar System]] and the structure of every [[Galaxy]].', ['physics', 'force']),
-    create('24', 'Light Year', 'A unit of length used to express astronomical distances. It is the distance that light travels in vacuum in one Julian year (approx. 9.46 trillion km). Used to measure distance to [[Proxima Centauri]] and [[Andromeda Galaxy]].', ['measurement']),
-    create('25', 'Star', 'An astronomical object consisting of a luminous spheroid of plasma held together by its own [[Gravity]]. The nearest star to [[Earth]] is the [[Sun]].', ['celestial body']),
-    create('26', 'Spiral Galaxy', 'A type of [[Galaxy]] characterized by a flat, rotating disk containing stars, gas, and dust, and a central concentration of stars known as the bulge. The [[Milky Way]] and [[Andromeda Galaxy]] are examples.', ['structure']),
-    create('27', 'Elliptical Galaxy', 'A type of [[Galaxy]] having an approximately ellipsoidal shape and a smooth, nearly featureless brightness profile. Unlike a [[Spiral Galaxy]], they have little structure.', ['structure']),
-    create('28', 'Titan', 'The largest moon of [[Saturn]]. It is the only moon known to have a dense atmosphere and the only object other than [[Earth]] where stable bodies of surface liquid have been found.', ['moon']),
-    create('29', 'Europa', 'A moon of [[Jupiter]]. It has the smoothest surface of any known solid object in the [[Solar System]]. It likely has a subsurface ocean of water, making it a candidate for extraterrestrial life.', ['moon']),
-    create('30', 'Ganymede', 'A moon of [[Jupiter]] and the largest and most massive moon in the [[Solar System]]. It is even larger than the planet [[Mercury]].', ['moon']),
-    create('31', 'Io', 'A moon of [[Jupiter]]. It is the most geologically active object in the [[Solar System]], with over 400 active volcanoes.', ['moon']),
-    create('32', 'Enceladus', 'A moon of [[Saturn]]. It ejects plumes of salt water and ice grains from its south polar region, suggesting a subsurface ocean.', ['moon']),
-    create('33', 'Phobos', 'The larger and closer of the two natural satellites of [[Mars]].', ['moon']),
-    create('34', 'Deimos', 'The smaller and outer of the two natural satellites of [[Mars]].', ['moon']),
-    create('35', 'Kuiper Belt', 'A circumstellar disc in the outer [[Solar System]], extending beyond the orbit of [[Neptune]]. It is similar to the [[Asteroid Belt]] but far larger. [[Pluto]] resides here.', ['region']),
-    create('36', 'Asteroid Belt', 'The circumstellar disc in the [[Solar System]] located roughly between the orbits of [[Mars]] and [[Jupiter]].', ['region']),
-    create('37', 'Oort Cloud', 'A theoretical cloud of predominantly icy planetesimals proposed to surround the [[Sun]] at distances ranging up to 100,000 AU.', ['region']),
-    create('38', 'Nebula', 'A distinct body of interstellar clouds (which can consist of cosmic dust, hydrogen, helium, molecular clouds). Stars are often born in them, like in the [[Orion Nebula]].', ['structure']),
-    create('39', 'Orion Nebula', 'A diffuse [[Nebula]] situated in the Milky Way, being south of Orion\'s Belt in the constellation of Orion. It is one of the brightest nebulae.', ['nebula']),
-    create('40', 'Supernova', 'A powerful and luminous stellar explosion. This transient astronomical event occurs during the last evolutionary stages of a massive [[Star]] or when a [[White Dwarf]] is triggered into runaway nuclear fusion.', ['event']),
-    create('41', 'Neutron Star', 'The collapsed core of a massive supergiant [[Star]]. They are the smallest and densest stars known to exist.', ['star', 'remnant']),
-    create('42', 'Pulsar', 'A highly magnetized rotating [[Neutron Star]] that emits beams of electromagnetic radiation out of its magnetic poles.', ['star']),
-    create('43', 'White Dwarf', 'A stellar core remnant composed mostly of electron-degenerate matter. Our [[Sun]] will eventually become one.', ['star', 'remnant']),
-    create('44', 'Red Giant', 'A luminous giant [[Star]] of low or intermediate mass in a late phase of stellar evolution.', ['star']),
-    create('45', 'Proxima Centauri', 'A small, low-mass star located 4.244 [[Light Year]]s from the [[Sun]]. It is the closest known star to the [[Solar System]]. It has an exoplanet, [[Proxima Centauri b]].', ['star']),
-    create('46', 'Proxima Centauri b', 'An exoplanet orbiting within the [[Goldilocks Zone]] of the red dwarf star [[Proxima Centauri]], the closest star to the [[Sun]].', ['exoplanet']),
-    create('47', 'Goldilocks Zone', 'The habitable zone around a star where the temperature is just right - not too hot and not too cold - for liquid water to exist on a planet like [[Earth]].', ['concept']),
-    create('48', 'Exoplanet', 'A planet outside the [[Solar System]]. Thousands have been discovered by telescopes like [[Kepler Space Telescope]] and [[James Webb Space Telescope]].', ['planet']),
-    create('49', 'James Webb Space Telescope', 'A space telescope conducted by NASA, ESA, and CSA. It views the [[The Cosmos]] in infrared, allowing it to see through dust clouds in a [[Nebula]] and observe the early universe after the [[Big Bang]].', ['tech']),
-    create('50', 'Hubble Space Telescope', 'A space telescope that was launched into low Earth orbit in 1990. It has provided some of the most detailed images of the [[The Cosmos]].', ['tech']),
-    create('51', 'Voyager 1', 'A space probe launched by NASA in 1977. It is the most distant human-made object from [[Earth]], having entered interstellar space beyond the [[Kuiper Belt]].', ['tech']),
-    create('52', 'Apollo 11', 'The spaceflight that first landed humans on the [[Moon]]. Commander Neil Armstrong and pilot Buzz Aldrin formed the American crew.', ['history']),
-    create('53', 'Kepler Space Telescope', 'A retired space telescope launched by NASA to discover Earth-size planets orbiting other stars, hunting for [[Exoplanet]]s.', ['tech']),
-    create('54', 'Triangulum Galaxy', 'A [[Spiral Galaxy]] approximately 3 million [[Light Year]]s from Earth. It is the third-largest member of the Local Group, behind the [[Andromeda Galaxy]] and the [[Milky Way]].', ['galaxy']),
-    create('55', 'Sombrero Galaxy', 'A peculiar [[Galaxy]] of unclear classification in the constellation Virgo. It has a bright nucleus and an unusually large central bulge.', ['galaxy']),
-    create('56', 'Whirlpool Galaxy', 'A distinct interacting grand-design [[Spiral Galaxy]]. It was the first galaxy to be classified as a spiral galaxy.', ['galaxy']),
-    create('57', 'Irregular Galaxy', 'A [[Galaxy]] that does not have a distinct regular shape, unlike a [[Spiral Galaxy]] or an [[Elliptical Galaxy]].', ['structure']),
-    create('58', 'TRAPPIST-1 System', 'A system of seven temperate terrestrial planets orbiting an ultra-cool dwarf star. Several are in the [[Goldilocks Zone]].', ['system']),
-    create('59', 'Pillars of Creation', 'A photograph taken by the [[Hubble Space Telescope]] of elephant trunks of interstellar gas and dust in the Eagle [[Nebula]].', ['phenomenon']),
-    create('60', 'Eagle Nebula', 'A young open cluster of stars in the constellation Serpens. It contains the [[Pillars of Creation]].', ['nebula'])
-  ];
-};
 
 // Hook for debouncing values
 function useDebounce<T>(value: T, delay: number): T {
@@ -109,10 +39,10 @@ function useDebounce<T>(value: T, delay: number): T {
 
 const App: React.FC = () => {
   // --- State ---
-  const [notes, setNotes] = useState<Note[]>(generateCosmosData());
+  const [notes, setNotes] = useState<Note[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  
-  const [activeNoteId, setActiveNoteId] = useState<string>(notes[0].id);
+
+  const [activeNoteId, setActiveNoteId] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState('');
   const [showGraph, setShowGraph] = useState(true); // Default to true to show off the galaxy
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -127,7 +57,10 @@ const App: React.FC = () => {
   const debouncedNotes = useDebounce(notes, 800);
 
   // --- Derived State ---
-  const activeNote = useMemo(() => notes.find(n => n.id === activeNoteId) || notes[0], [notes, activeNoteId]);
+  const activeNote = useMemo(() => {
+    if (notes.length === 0) return null;
+    return notes.find(n => n.id === activeNoteId) || notes[0];
+  }, [notes, activeNoteId]);
   
   const filteredNotes = useMemo(() => {
     if (!searchQuery) return notes.sort((a, b) => a.title.localeCompare(b.title));
@@ -139,6 +72,7 @@ const App: React.FC = () => {
 
   // Calculate Backlinks
   const backlinks = useMemo(() => {
+    if (!activeNote) return [];
     return notes.filter(n => {
       const links = extractLinks(n.content);
       return links.includes(activeNote.title); // Linking by Title for this demo
@@ -191,11 +125,20 @@ const App: React.FC = () => {
       const loadedNotes = await loadNotes();
       if (loadedNotes.length > 0) {
         setNotes(loadedNotes);
+        setActiveNoteId(loadedNotes[0].id);
       } else {
-        // If no notes in file, save the default cosmos data
-        const defaultNotes = generateCosmosData();
-        setNotes(defaultNotes);
-        await saveNotes(defaultNotes);
+        // If no notes in file, create a welcome note
+        const welcomeNote: Note = {
+          id: uuidv4(),
+          title: 'Welcome to NeuroNote',
+          content: 'Start taking notes with [[wiki-style links]] to connect your ideas!\n\nClick the **+ button** to create a new note.',
+          tags: [],
+          updatedAt: Date.now(),
+          createdAt: Date.now()
+        };
+        setNotes([welcomeNote]);
+        setActiveNoteId(welcomeNote.id);
+        await saveNotes([welcomeNote]);
       }
       setIsLoading(false);
     };
@@ -281,7 +224,7 @@ const App: React.FC = () => {
         const newNote: Note = {
            id: uuidv4(),
            title: title,
-           content: `Linked from [[${activeNote.title}]]`,
+           content: activeNote ? `Linked from [[${activeNote.title}]]` : '',
            tags: [],
            updatedAt: Date.now(),
            createdAt: Date.now()
@@ -293,6 +236,7 @@ const App: React.FC = () => {
   };
 
   const handleAICheck = async () => {
+    if (!activeNote) return;
     setIsAnalyzing(true);
     setAiSuggestion([]);
     try {
@@ -398,10 +342,11 @@ const App: React.FC = () => {
             </button>
             <input
               type="text"
-              value={activeNote.title}
+              value={activeNote?.title || ''}
               onChange={(e) => updateActiveNote({ title: e.target.value })}
               className="text-lg font-bold bg-transparent focus:outline-none text-slate-800 placeholder-slate-300 flex-1"
               placeholder="Note Title"
+              disabled={!activeNote}
             />
             <button
               onClick={() => deleteNote(activeNoteId)}
@@ -458,7 +403,7 @@ const App: React.FC = () => {
                   <div className="h-4 bg-slate-200 rounded w-3/4" />
                 </div>
               </div>
-            ) : (
+            ) : activeNote ? (
               <>
                 {activeNote.tags.length > 0 && (
                   <div className="px-8 pt-4 flex gap-2">
@@ -505,6 +450,15 @@ const App: React.FC = () => {
                   placeholder="Start typing... Use @ to link other notes."
                 />
               </>
+            ) : (
+              <div className="flex-1 flex items-center justify-center text-slate-400">
+                <div className="text-center">
+                  <p className="mb-4">No note selected</p>
+                  <button onClick={createNote} className="px-4 py-2 bg-brand-500 text-white rounded-lg hover:bg-brand-600">
+                    Create First Note
+                  </button>
+                </div>
+              </div>
             )}
           </div>
 
